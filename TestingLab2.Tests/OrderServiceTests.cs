@@ -58,7 +58,7 @@ namespace TestingLab2.Tests
         [InlineData(false, true, true, 5)]
         [InlineData(false, true, false, 0)]
         [InlineData(false, false, false, 0)]
-        public void Process_CalculatesDiscount_AccordingToSpecification(bool isPremium, bool couponClaimed, bool isCouponValid, int expectedDiscount)
+        public void Process_CalculatesDiscount(bool isPremium, bool couponClaimed, bool isCouponValid, int expectedDiscount)
         {
             // Arrange
             _stockMock.Setup(s => s.AvailableUnits()).Returns(10);
